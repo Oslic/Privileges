@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ServicesTest" verbose="1">
+    <parameter name="file" value="ppr.properties"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://ppr-v3.transitcard.ru"/>
+ 
+
+    <test name="ServicesTest">
+        <classes>
+            <class name="ru.fleetcor.autotests.ServicesTest">
+             <!--    <methods>
+                     <include name="aboutServiceParking"/>
+                 </methods> -->
+            </class>
+        </classes>
+    </test>
+
+  <!--  <test name="ServicesTest FF">
+        <parameter name="file" value="ppr.properties"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://ppr-v3.transitcard.ru"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.ServicesTest">
+               <methods>
+                    <include name="aboutServiceAZS"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+
+    <!--<test name="ServicesTest EDGE">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.ServicesTest">
+               <methods>
+                    <include name="filterForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    
+</suite>

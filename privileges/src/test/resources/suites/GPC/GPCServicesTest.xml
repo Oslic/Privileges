@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GPCServicesTest" verbose="1" parallel="tests" thread-count="3">
+    <parameter name="file" value="gpc.properties"/>
+ 
+    <test name="ServicesTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.ServicesTest">
+                <!-- <methods>
+                     <include name="aboutServiceParking"/>
+                 </methods>-->
+            </class>
+        </classes>
+    </test>
+
+    <!--<test name="ServicesTest FF">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.ServicesTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>
+
+    <test name="ServicesTest EDGE">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.ServicesTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>-->
+    
+</suite>

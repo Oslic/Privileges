@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginTest" verbose="1">
+    <parameter name="file" value="ppr.properties"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://ppr-v3.transitcard.ru"/>
+ 
+    <test name="LoginTest">
+        <classes>
+            <class name="ru.fleetcor.autotests.LoginTest">
+              <!--   <methods>
+                     <include name="logout"/>
+                 </methods> -->
+            </class>
+        </classes>
+    </test>
+<!--
+    <test name="LoginTest FF">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.LoginTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>
+
+    <test name="LoginTest EDGE">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.LoginTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>-->
+
+</suite>

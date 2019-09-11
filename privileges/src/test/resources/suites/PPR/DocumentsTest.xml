@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DocumentsTest" verbose="1" parallel="tests" thread-count="3">
+    <parameter name="file" value="ppr.properties"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://ppr-v3.transitcard.ru"/>
+ 
+    <test name="DocumentsTest">
+        <classes>
+            <class name="ru.fleetcor.autotests.DocumentsTest">
+              <!--  <methods>
+                     <include name="connectEDO"/>
+                 </methods>   -->
+            </class>
+        </classes>
+    </test>
+
+    <!--<test name="DocumentsTest FF">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.DocumentsTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>
+
+    <test name="DocumentsTest EDGE">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.DocumentsTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>-->
+    
+</suite>

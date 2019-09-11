@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GPCHeaderTest" verbose="1" parallel="tests" thread-count="3">
+    <parameter name="file" value="gpc.properties"/>
+ 
+    <test name="HeaderTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.HeaderTest">
+                 <!--<methods>
+                     <include name="filterForm"/>
+                 </methods>-->
+            </class>
+        </classes>
+    </test>
+
+    <!--<test name="HeaderTest FF">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.HeaderTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>
+
+    <test name="HeaderTest EDGE">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="ru.fleetcor.autotests.HeaderTest">
+                &lt;!&ndash;<methods>
+                    <include name="filterForm"/>
+                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>-->
+    
+</suite>

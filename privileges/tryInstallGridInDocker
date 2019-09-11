@@ -1,0 +1,80 @@
+oot@Uporo4ka:/etc/docker# docker network create grid
+f5dfa43361bb0e698a713c9e838cd31338abdf3be3bed6150d18bce05864b58a
+root@Uporo4ka:/etc/docker# docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+37e909094f6f        bridge              bridge              local
+f5dfa43361bb        grid                bridge              local  --- mnu
+
+
+docker network inspect grid
+[
+    {
+        "Name": "grid",
+        "Id": "f5dfa43361bb0e698a713c9e838cd31338abdf3be3bed6150d18bce05864b58a",
+        "Created": "2019-03-15T08:20:24.459284684Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+
+
+
+root@Uporo4ka:/etc/docker# docker run -d -p 4444:4444 --name selenium-hub selenium/hub
+Unable to find image 'selenium/hub:latest' locally
+latest: Pulling from selenium/hub
+84ed7d2f608f: Pull complete 
+Digest: sha256:a6e5abd1c649aa40853a073fb172ebef8094486839253afedc4d24173b000de6
+Status: Downloaded newer image for selenium/hub:latest
+4030536a36d9dc0046e6c3d0a5a8d06f57a52f5a772aec31ca257e9dec1c5567
+
+
+docker run -d --link selenium-hub:hub selenium/node-chrome
+Unable to find image 'selenium/node-chrome:latest' locally
+latest: Pulling from selenium/node-chrome
+0df9df7f57c1: Pull complete 
+Digest: sha256:656a0c72255c756c39587578465841e0fc0fa8e4b5b3949e33fac3ca2eb0aa8a
+Status: Downloaded newer image for selenium/node-chrome:latest
+5e9e78ac3482a2e6e0b3c47ca565c0ae8fff22dd39a4425446fbae27a2abe137
+
+
+docker run -d --link selenium-hub:hub selenium/node-firefox
+Unable to find image 'selenium/node-firefox:latest' locally
+latest: Pulling from selenium/node-firefox
+9e8289e4ee76: Pull complete 
+Digest: sha256:a2176e143e291797df56164a759c2f250731d37add01b1d8815bc5620426bc20
+Status: Downloaded newer image for selenium/node-firefox:latest
+9684c9510ee653c1942cb6790ccf89c913dc12d7bcf7c248e335da3d01082452
+
+
+root@Uporo4ka:/etc/docker# docker run -d --link selenium-hub:hub selenium/node-edge
+Unable to find image 'selenium/node-edge:latest' locally
+docker: Error response from daemon: pull access denied for selenium/node-edge,    ((((   repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+root@Uporo4ka:/etc/docker# docker run -d --link selenium-hub:hub selenium/node-safari
+Unable to find image 'selenium/node-safari:latest' locally
+docker: Error response from daemon: pull access denied for selenium/node-safari,    ((((   repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+
+
+

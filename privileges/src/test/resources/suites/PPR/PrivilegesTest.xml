@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PrivilegesTest" verbose="1" parallel="tests" thread-count="3">
+    <parameter name="file" value="ppr.properties"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://ppr-v3.transitcard.ru"/>
+
+    <test name="PrivilegesTest">
+        <classes>
+            <class name="ru.fleetcor.autotests.PrivilegesTest">
+                <!--    <methods>
+                        <include name="checkLocatorFullScreenMode"/>
+                    </methods> -->
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>

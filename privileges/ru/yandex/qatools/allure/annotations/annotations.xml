@@ -1,0 +1,5 @@
+<root>
+    <item name='ru.yandex.qatools.allure.annotations.Step'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
